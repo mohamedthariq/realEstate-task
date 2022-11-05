@@ -1,0 +1,907 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	
+<head>
+    <meta charset="utf-8">
+    <title>RealEstate Homepage</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="GNG Homes">
+    <!-- IE browsers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=11">  
+    <!-- styles -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+	<!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+ <script>  
+
+   
+</script>
+
+</head> 
+
+<body>
+
+    <header id="site-header">
+        <!-- navbar  -->
+        <nav class="navbar">
+            <a href="#" class="navbar-logo"><img src="images/logo.png" alt="Company Logo"></a>
+            <ul class="navbar-links custom-navbar">
+                <li class="navbar-dropdown">
+                    <a href="#"><i class="fa fa-home"></i> <span>For Sale</span> <i class="fa fa-chevron-down caret" aria-hidden="true"></i></a>
+                    <div class="dropdown">
+                        <a href="#">Flats</a>
+                        <a href="#">Homes</a>
+                        <a href="#">Commercial Space</a>
+                    </div>
+                </li>
+                <li class="navbar-dropdown">
+                    <a href="#"><i class="fa fa-building-o"></i> <span>To Rent</span> <i class="fa fa-chevron-down caret"></i></a>
+                    <div class="dropdown">
+                        <a href="#">Commercial</a>
+                        <a href="#">Home</a>
+                    </div>
+                </li>
+                <li class="navbar-dropdown custom-border">
+                    <a href="#" class="custom-nav1"><i class="fa fa-home"></i> <span>Shared Room</span></a>
+                    <a href="#" class="custom-nav2"><i class="fa fa-home"></i> <span>Shared</span></a>
+
+                </li>
+            </ul>
+            <ul class="navbar-links profile">
+                <li class="navbar-dropdown">
+                    <div>
+                        <a href="#" class="setting">
+                            <!-- <i class='fa fa-cog'></i> -->
+                            <i class='fa fa-asterisk'></i>
+                        </a>
+                    </div>
+                </li>
+                <li class="navbar-dropdown">
+                    <a href="#" class="user"><i class='fa fa-user-circle'></i></a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Form dropdown search section  -->
+        <div class="fillters">
+            <form class="formGroup" action="#">
+                <div class="fillter-name">
+                    <h2>For sale</h2>
+                </div>
+                <!-- <div class="form-dropdownGroup">search tag -->
+                <div class="textbox">
+                    <span aria-label="search"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    <label for="search">serch</label>
+                    <input id="search" class="searchbox-input" type="text" placeholder="DE1 or Derby or East Birmingham" name="search">
+                </div>
+                <!-- dropdown  -->
+                <div class="dropdowSet">
+                    <div class="dropdownCont" aria-expanded="true" aria-labelledby="select1">
+                        <div class="selectInput" aria-readonly="true" title="dropdown">0+ miles</div>
+                        <span><i class='fa fa-caret-down'></i></span>
+                        <ul aria-expanded="false" aria-hidden="false" class="hide" id="select1">
+                            <li value="1">2+ Miles</li>
+                            <li value="2">5+ Miles</li>
+                            <li value="3">10+ Miles</li>
+                            <li value="4">>10+ Miles</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdowSet">
+                    <div class="dropdownCont" aria-expanded="true" aria-labelledby="select2">
+                        <div class="selectInput" aria-readonly="true" title="dropdown">Property Type</div>
+                        <span><i class='fa fa-caret-down'></i></span>
+                        <ul aria-expanded="false" aria-hidden="false" class="hide" id="select2">
+                            <li value="1">Flats</li>
+                            <li value="2">House</li>
+                            <li value="3">Land</li>
+                            <li value="4">Lake House</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdowSet">
+                    <div class="dropdownCont" aria-expanded="true" aria-labelledby="select3">
+                        <div class="selectInput" aria-readonly="true" title="dropdown" style="opacity: 1;">Price</div>
+                        <span><i class='fa fa-chevron-down icon-size'></i></span>
+                        <ul aria-expanded="false" aria-hidden="false" class="hide" id="select3">
+                            <li value="1">Min-Max</li>
+                            <li value="2">Max-Min</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdowSet iconChange">
+                    <div class="dropdownCont" aria-expanded="true" aria-labelledby="select4">
+                        <div class="selectInput" aria-readonly="true" title="dropdown" style="opacity: 1;">Bedrooms</div>
+                        <span><i class='fa fa-chevron-right icon-size'></i></span>
+                        <ul aria-expanded="false" aria-hidden="false" class="hide" id="select4">
+                            <li value="1">1 Room</li>
+                            <li value="2">2 Rooms</li>
+                            <li value="3">3 Rooms</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdowSet iconChange">
+                    <div class="dropdownCont" aria-expanded="true" aria-labelledby="select2">
+                        <div class="selectInput" aria-readonly="true" title="dropdown" style="opacity: 1;">Advanced</div>
+                        <span><i class='fa fa-chevron-right icon-size'></i></span>
+                        <ul aria-expanded="false" aria-hidden="false" class="hide" id="slct">
+                            <li value="1">Fully Furnished</li>
+                            <li value="2">Semi Furnished</li>
+                            <li value="3">Parking</li>
+                            <li value="4">Garden</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- </div>   -->
+                <button type="button" class="searchButton">search</button>
+                <button type="button" class="reset" onClick="window.location.reload();">Reset</button>
+            </form>
+        </div>
+
+        <div class="mainContainer">
+            <div class="topic-name">Propert for sale</div>
+            <div class="dropdowGroup">
+                <div class="dropdowSet">
+                    <div class="dropdownCont" aria-expanded="true" aria-labelledby="select2">
+                        <div class="selectInput" aria-readonly="true" title="dropdown">$490000</div>
+                        <span><i class='fa fa-caret-down'></i></span>
+                        <ul aria-expanded="false" aria-hidden="false" class="hide" id="slct">
+                            <li value="1">$10000</li>
+                            <li value="2">$15000</li>
+                            <li value="3">$25000</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdowSet">
+                    <div class="dropdownCont" aria-expanded="true" aria-labelledby="select2">
+                        <div class="selectInput" aria-readonly="true" title="dropdown">Max Price</div>
+                        <span><i class='fa fa-caret-down'></i></span>
+                        <ul aria-expanded="false" aria-hidden="false" class="hide" id="slct">
+                            <li value="1">Min-Max</li>
+                            <li value="2">Max-Min</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-listItem">
+                <button class="active" id="grid-view"><i class="fa fa-object-ungroup" aria-hidden="true"></i> Grid View</button>
+                <button id="card-view"><i class="fa fa-id-card-o" aria-hidden="true"></i> Card View</button>
+                <button id="map-view"><i class="fa fa-map-o"  aria-hidden="true"></i> Map view</button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- maincontainer cards  -->
+
+    <div class="bodyContainer">
+        <main class="grid card-group scrollable-element">
+            <article class="grid-item card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-1.jpg" alt="Sample house photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">$60,578</div>
+                    <div class="iconUtility applicance">
+                        <div class="utilities">
+                            <span>2</span>
+                            <i class="fa fa-bed" aria-hidden="true"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>2</span>
+                            <i class="fa fa-bath" aria-hidden="true"></i>
+                        </div>
+                        <div class="favorites">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>Nelson Street Studios London, London, E16</span>
+                        </div>
+                    </div>
+
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- dummytag -->
+            <article class="grid-item card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-2.jpg" alt="House Sample photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>2</span>
+                        </div>
+                        <div class="iconGroup">
+                            <i class="fa fa-film" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">&#163;2000</div>
+                    <div class="iconUtility">
+                        <div class="utilities">
+                            <span>2</span>
+                            <i class="fa fa-bed" aria-hidden="true"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>2</span>
+                            <i class="fa fa-bath" aria-hidden="true"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>1</span>
+                            <i class="fa fa-car" aria-hidden="true"></i>
+                        </div>
+                        <div class="favorites">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>London,</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- dummyTag -->
+            <article class="grid-item card-item">
+                <div class="image-list card-list">
+					<img src="images/house-3.jpg" alt="Sample house photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>2</span>
+                        </div>
+                        <div class="iconGroup">
+                            <i class="fa fa-film" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">&#163;2000</div>
+                    <div class="iconUtility">
+                        <div class="utilities">
+                            <span>2</span>
+                            <i class="fa fa-bed" aria-hidden="true"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>2</span>
+                            <i class="fa fa-bath" aria-hidden="true"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>1</span>
+                            <i class="fa fa-car" aria-hidden="true"></i>
+                        </div>
+                        <div class="favorites">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>London,</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="grid-item card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-4.jpg" alt="Sample photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">$15,500</div>
+                    <div class="iconUtility">
+                        <div class="favorites">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>london, FGR</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="grid-item  card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-5.jpg" alt="Sample photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">$250,478</div>
+                    <div class="iconUtility">
+                        <div class="favorites">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker"></i>
+                            <span>Nelson Street Studios London, London, E16</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="grid-item  card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-6.jpg" alt="Sample photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">$315,278</div>
+                    <div class="iconUtility">
+                        <div class="utilities">
+                            <span>2</span>
+                            <i class="fa fa-bed" aria-hidden="true"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>1</span>
+                            <i class="fa fa-bath" aria-hidden="true"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>1</span>
+                            <i class="fa fa-car"></i>
+                        </div>
+                        <div class="favorites">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker"></i>
+                            <span>West Hendon, London, NW9</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="grid-item card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-7.jpg" alt="Sample photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>7</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">$50,578</div>
+                    <div class="iconUtility">
+                        <div class="utilities">
+                            <span>5</span>
+                            <i class="fa fa-bed"></i>
+                        </div>
+                        <div class="favorites">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>Churchill Road, Edgware, HA8</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="grid-item card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-8.jpg" alt="Sample photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">$340,228</div>
+                    <div class="iconUtility">
+                        <div class="utilities">
+                            <span>2</span>
+                            <i class="fa fa-bed"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>3</span>
+                            <i class="fa fa-bath" aria-hidden="true"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>1</span>
+                            <i class="fa fa-car" aria-hidden="true"></i>
+                        </div>
+                        <div class="favorites">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker"></i>
+                            <span>Roe Lane, London, NW9</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="grid-item card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-1.jpg" alt="Sample house photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>27</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">$60,578</div>
+                    <div class="iconUtility applicance">
+                        <div class="utilities">
+                            <span>5</span>
+                            <i class="fa fa-bed" aria-hidden="true"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>1</span>
+                            <i class="fa fa-bath" aria-hidden="true"></i>
+                        </div>
+                        <div class="favorites">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>Nelson Street Studios London, London, E16</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="grid-item card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-10.jpg" alt="Sample photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>4</span>
+                        </div>
+                        <div class="iconGroup">
+                            <i class="fa fa-film" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">$6578</div>
+                    <div class="iconUtility applicance">
+                        <div class="utilities">
+                            <span>2</span>
+                            <i class="fa fa-bed" aria-hidden="true"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>3</span>
+                            <i class="fa fa-bath"></i>
+                        </div>
+                        <div class="favorites">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker"></i>
+                            <span>Nelson Street Studios London, London, E16</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="grid-item card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-4.jpg" alt="Sample photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>6</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">$42578</div>
+                    <div class="iconUtility applicance">
+                        <div class="utilities">
+                            <span>5</span>
+                            <i class="fa fa-bed"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>1</span>
+                            <i class="fa fa-bath" aria-hidden="true"></i>
+                        </div>
+                        <div class="favorites">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker"></i>
+                            <span>Nelson Street Studios London, London, E16</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="grid-item card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-2.jpg" alt="Sample photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>27</span>
+                        </div>
+                        <div class="iconGroup">
+                            <i class="fa fa-film" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">$60,578</div>
+                    <div class="iconUtility">
+                        <div class="utilities">
+                            <span>5</span>
+                            <i class="fa fa-bed"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>1</span>
+                            <i class="fa fa-bath"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>1</span>
+                            <i class="fa fa-car"></i>
+                        </div>
+                        <div class="favorites">
+                            <i class="fa fa-heart-o"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker"></i>
+                            <span>London, E16</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="grid-item card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-8.jpg" alt="Sample photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">$40,228</div>
+                    <div class="iconUtility">
+                        <div class="utilities">
+                            <span>2</span>
+                            <i class="fa fa-bed"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>3</span>
+                            <i class="fa fa-bath" aria-hidden="true"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>1</span>
+                            <i class="fa fa-car" aria-hidden="true"></i>
+                        </div>
+                        <div class="favorites">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker"></i>
+                            <span>Roe Lane, London, NW9</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="grid-item card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-2.jpg" alt="Sample photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">$50,578</div>
+                    <div class="iconUtility">
+                        <div class="utilities">
+                            <span>5</span>
+                            <i class="fa fa-bed"></i>
+                        </div>
+                        <div class="favorites">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>Churchill Road, Edgware, HA8</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="grid-item card-item">
+                <div class="image-list card-list">
+                    <img src="images/house-3.jpg" alt="Sample house photo">
+                    <div class="utilities imgUtility">
+                        <div class="iconGroup">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span>2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-content card-content">
+                    <div class="hd-tag">
+                        <h3>Madison Brook, Docklands</h3>
+                    </div>
+                    <div class="priceTag">$70,628</div>
+                    <div class="iconUtility">
+                        <div class="utilities">
+                            <span>2</span>
+                            <i class="fa fa-bed"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>3</span>
+                            <i class="fa fa-bath" aria-hidden="true"></i>
+                        </div>
+                        <div class="utilities">
+                            <span>1</span>
+                            <i class="fa fa-car" aria-hidden="true"></i>
+                        </div>
+                        <div class="favorites">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationTag">
+                            <i class="fa fa-map-marker"></i>
+                            <span>Roe Lane, London, NW9</span>
+                        </div>
+                    </div>
+                    <div class="cardview-detail">
+                        <div class="building-detail">
+                            <p>Set within a fabulous Modern development this top floor two bedroom apartment.</p>
+                        </div>
+                        <div class="station-detail">
+                            <h4>Nearest Stations:</h4>
+                        </div>
+                        <div class="station-image">
+                            <img src="images/station1.png" alt="Train station logo" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <section class="locationMaps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.182370726!2d-0.10159865000000001!3d51.52864165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sin!4v1659680070393!5m2!1sen!2sin"
+                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>GNB Property</h3>
+            <p>This Template is a blog website where you will find great properties. Here each properties is beautifully described step by step with the requirement.</p>
+
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-p">copyright &copy; <a href="#">Developer Name</a> </p>
+            <div class="footer-menu">
+                <ul class="f-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
